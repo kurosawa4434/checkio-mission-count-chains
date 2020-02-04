@@ -7,6 +7,24 @@ Each test is a dict with
     "explanation" -- not necessarily a key, it's used for an additional info in animation.
 """
 
+from random import randint, choice
+from my_solution import count_chains
+
+
+def make_random_tests(num):
+    random_tests = []
+    for _ in range(num):
+        circles = []
+        for _ in range(randint(1, 10)):
+            r = choice([1, 1, 1, 2, 2, 2, 3, 3, 4])
+            x = randint(-10, 10)
+            y = randint(-10, 10)
+            if (x, y, r) not in circles:
+                circles.append((x, y, r))
+        random_tests.append({'input': circles,
+                             'answer': count_chains(circles)})
+    return random_tests
+
 
 TESTS = {
     "Basics": [
@@ -52,5 +70,6 @@ TESTS = {
             "input": [[0, 0, 2], [1, 0, 3], [3, 0, 1], [2, 1, 1], [-2, -2, 1], [0, 0, 4], [-3, 0, 1]],
             "answer": 3,
         },
-    ]
+    ],
+    'Randoms': make_random_tests(10),
 }
