@@ -117,7 +117,7 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
              *----------------------------------------------*/
             const x = -min_width*unit
             const y = max_height*unit
-            paper.text(x-unit/4, y+unit/4, 0).attr({'font-size': max_units/7*12})
+            paper.text(x-unit/4, y+unit/3, 0).attr({'font-size': 7/max_units*20})
 
         }
 
