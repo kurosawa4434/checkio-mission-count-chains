@@ -38,7 +38,7 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
              * values
              *
              *----------------------------------------------*/
-            const grid_size_px = 300
+            const grid_size_px = 200
             let min_height = -1
             let min_width = -1
             let max_height = 4
