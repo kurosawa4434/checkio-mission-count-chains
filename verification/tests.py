@@ -70,6 +70,11 @@ TESTS = {
             "input": [[0, 0, 2], [1, 0, 3], [3, 0, 1], [2, 1, 1], [-2, -2, 1], [0, 0, 4], [-3, 0, 1]],
             "answer": 3,
         },
+        {
+            "input": [(0, 0, 1), (3, 0, 1), (2, 0, 1), (5, 0, 1), (1, 0, 1), (4, 0, 1)],
+            "answer": 1,
+            "explanation": 'discontinuous input values'
+        },
     ],
     'Randoms': make_random_tests(10),
 }
